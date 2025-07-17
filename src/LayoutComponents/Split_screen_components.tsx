@@ -18,13 +18,14 @@ interface SplitScreenProps {
 
 export const SplitScreen: FC<SplitScreenProps> = ({ left: Left, right: Right }) => {
   return (
-    <Container className="flex h-screen">
+    <Container className="">
       <Panel>
         <Left />
       </Panel>
-      <Panel className="w-1/2 p-4 bg-gray-200">
+      <Panel className="">
         <Right />
       </Panel>
     </Container>
   );
 };
+
