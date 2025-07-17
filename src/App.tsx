@@ -35,31 +35,20 @@ const Right = () => {
 }
 
 
-
-
-
-
 function App() {
-
 
   return (
     <>
+
       <SplitScreen 
-      left={Left}
-      right={Right}
+        left={Left}
+        right={Right}
       />
 
-      
-      {/*
-        Assuming SplitScreenImprovent expects left/right as props, not children.
-        If it expects children, you may need to adjust the SplitScreenImprovent component accordingly.
-      */}
-      <SplitScreenImprovent
-        left={() => <LeftHandComponent message="LEFT!!" />}
-        right={() => <RightHandComponent message="RIGHT!!" />}
-        leftWeight={1}
-        rightWeight={1}
-      />
+      <SplitScreenImprovent leftWeight={1} rightWeight={1}>
+        <LeftHandComponent message="LEFT!!" />
+        <RightHandComponent message="RIGHT!!" />
+      </SplitScreenImprovent>
 
 
     </>
